@@ -1,0 +1,205 @@
+15/12/21
+
+1) Récupération des données
+	- Changer la requette de récupération des données
+
+2) Traitement du texte
+	- Supprimer les stop words
+	- Enlever les carractères spéciaux
+	- Faire un lemmatizer
+
+3) Analyse du dataset
+	- Etudier les tags les plus données
+
+4) Réduction dimensionnel
+	- Sélectionner les questions dans les 10-50 tags les plus utilisées
+
+5) Mettre en place un git Hub
+
+6) Mise en forme des datasets de modélisation
+	- Merge le titre et le body
+
+	a. TF-idf
+	b. Word2vec
+	c. Doc2vec
+
+7) Modélisation
+	Non-supervisés
+		a. Lattente Dirichlet Allocation (LDA)
+		-> Permet de définir le nombre de sujet
+			- Mettre en place un GridSearch et évaluer le modèle la perplexcité ou la cohérence.
+
+		-> Mettre en place une méthode supervisé ou non pour attribuer les tags
+
+	Supervisés
+	-> Permet de créer des modèles pour attribuer des tags
+		b. OneVersusRest
+		c. Chain
+
+8) Méthode d'évaluation des données
+
+23/12/21
+
+1) Récupération des données
+	- Changer la requette de récupération des données (important)
+	- On veut 90 000 individues
+
+2) Traitement du texte
+	- Ok
+
+3) Analyse du dataset
+	Analys univarié
+	- Mots les plus récurents dans le titre et body
+	- Nombre de mots
+		-> Sélectionner les titre et body dans la tendence moyenne de taille
+	- Nombre de Tags
+		-> Filtrer le nombre de tags par question
+		-> Filtrer les question qui ont moins 1 tags dans les 10-50 meilleurs (500 au début) (done)
+	- Regarder la fréquence des mots
+		-> Filtre le bruit niveau contenu
+
+	Analyse multivariée
+	- Semble pas important
+
+4) Réduction dimensionnel
+	- Sélectionner les questions dans les 10-50 tags les plus utilisées
+
+5) Mettre en place un git Hub
+
+6) Mise en forme des datasets de modélisation
+	- Merge le titre et le body
+
+	a. TF-idF
+	b. Word2vec
+	c. Doc2vec
+	d. Réseau de neuronens (Avancée)
+
+7) Modélisation
+	Non-supervisés
+		a. Lattente Dirichlet Allocation (LDA)
+		-> Permet de définir le nombre de sujet
+			- Mettre en place un GridSearch et évaluer le modèle la perplexcité ou la cohérence.
+			- TopicXDoc, TagsXDoc -> TagsXTopics
+		-> Evaluer le modèle
+			- Accuracy
+			- f1_score
+			- Précision
+			- Recall
+			
+		b. NMF (sklearn)
+		-> Mettre en place une méthode supervisé ou non pour attribuer les tags aux topics
+			
+	Supervisés
+	-> Permet de créer des modèles pour attribuer des tags
+		a. OneVersusRest
+			- SVM, LogisticRegression, RandomForest, XGBoost
+		b. Chain
+			- SVM, RandomForest, XGBoost
+
+	-> ROC curve et matrice de graham ?
+
+8) Méthode d'évaluation des données
+	- Précision
+	- Rappel
+	- f1 score
+	- accuracy
+
+9) Développer une api dans Flask Heroku
+
+6/01/2022
+
+1) Récupération des données
+	- Ok
+
+2) Traitement du texte
+	- Ok
+
+3) Analyse du dataset
+	- Ok
+
+5) Mettre en place un git Hub
+	- Ok
+
+6) Mise en forme des datasets de modélisation
+	- BOW
+		/!\ Attention choix no_above -> 50%
+
+	a. TF-idF
+	b. Word2vec
+	c. Doc2vec
+	d. Réseau de neuronens (Avancée)
+
+7) Modélisation
+	- Diviser le dataset en 3
+		-> Training (70)
+		-> Test (20)
+		-> Eval (10)
+
+	- Installer PyLDAvis 
+	- Non-supervisés
+		a. Lattente Dirichlet Allocation (LDA)
+		-> Permet de définir le nombre de sujet
+			- Evaluer la perplexcité ou la cohérence du modèle.
+			
+		b. NMF (sklearn)
+		-> Mettre en place une méthode supervisé ou non pour attribuer les tags aux topics
+	-> TopicXDoc, TagsXDoc -> TagsXTopics
+		- Choisir les (2-3) plus grandes valeurs
+
+	-> Evaluer le modèle
+		- Accuracy
+		- Précision
+		- F1_score
+		- Recall
+		- Jaccard
+			
+	Supervisés
+	-> Permet de créer des modèles pour attribuer des tags
+		a. OneVersusRest
+			- SVM, LogisticRegression, RandomForest, XGBoost
+		b. Chain
+			- SVM, RandomForest, XGBoost
+
+	-> Evaluer le modèle
+		- Accuracy
+		- Précision
+		- F1_score -> plus important
+		- Recall
+		- Jaccard -> plus important
+
+8) Développer une api dans Flask Heroku
+
+
+12/01/2022
+
+6) Mise en forme des datasets de modélisation
+	-> Tfidf avec skl au lieu de gensim
+
+7) Modélisation
+	-> Matrice de confusion pour évaluer le modèle
+		- valeur prédite X valeurs réel
+
+	-> Evaluer
+		- Accuracy
+		- Précision
+		- F1_score
+		- Recall
+		- Jaccard
+
+L'étiquetage peut-être compliqué à mettre en place.
+
+8) Google collab, kaggle
+	-> requiremet.txt :
+		pip install -r requiremnt.txt (7heures max/session)
+
+19/01/2022
+7) Modélisation
+	- Non-supervisé
+		-> regarder la correspondance entre les tags et les mots du topics.
+		-> problèmatique de comment associer les tags au topics
+		-> Les résultats ne sont pas fou, mais il faut obtenir des résultats cohérent
+
+	- Supervisé
+		-> Vestorization(TFidF/word2vec/doc2vec), model(Linear/SVC/XGBoost/RandomForest), apprentissage (OVR/Chain)
+
+		
