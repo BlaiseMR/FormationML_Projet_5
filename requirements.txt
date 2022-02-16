@@ -1,4 +1,4 @@
-beautifullsoup4==4.10.0
+beautifullsoup4
 langdetect==1.0.9
 nltk==3.7
 pandas==1.4.1
