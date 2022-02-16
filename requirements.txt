@@ -2,4 +2,5 @@ bs4
 langdetect==1.0.9
 nltk
 pandas==1.4.1
+sklearn
 streamlit==1.5.1

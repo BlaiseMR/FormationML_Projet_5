@@ -5,6 +5,7 @@ import os
 import pandas as pd
 import pickle
 # import request
+import sklearn
 import streamlit as st
 import string
 
@@ -109,8 +110,8 @@ def main():
     nltk.download('averaged_perceptron_tagger')
     nltk.download('omw-1.4')
     
-    filename = file_selector()
-    st.write('You selected `%s`' % filename)
+#     filename = file_selector()
+#     st.write('You selected `%s`' % filename)
     
     load_pipe = pickle.load(open('./App/Pipe_LogReg/model.pkl', 'rb'))
     MLB = pickle.load(open('./App/LabelBinarizer.pkl', 'rb'))
