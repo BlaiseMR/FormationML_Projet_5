@@ -1,4 +1,5 @@
 bs4
+cloudpickle
 langdetect==1.0.9
 nltk
 pandas==1.4.1
