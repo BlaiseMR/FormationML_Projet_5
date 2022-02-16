@@ -1,12 +1,17 @@
 from bs4 import BeautifulSoup
 from langdetect import detect, DetectorFactory
 import nltk
+import os
 import pandas as pd
 import pickle
 # import request
 import streamlit as st
 import string
 
+def file_selector(folder_path = '.'):
+    filenames = os.listdir(folder_path)
+    selected_filename = st.selectbox('Select a file', filenames)
+    return os.path.join(folder_path, selected_filename)
 
 def set_str(title_text, body_ext):
     lemmatizer = nltk.stem.WordNetLemmatizer()
@@ -103,6 +108,9 @@ def main():
     nltk.download('punkt')
     nltk.download('averaged_perceptron_tagger')
     nltk.download('omw-1.4')
+    
+    filename = file_selector()
+    st.write('You selected `%s`' % filename)
     
     load_pipe = pickle.load(open('./APP/Pipe_LogReg/model.pkl', 'rb'))
     MLB = pickle.load(open('./APP/LabelBinarizer.pkl', 'rb'))
