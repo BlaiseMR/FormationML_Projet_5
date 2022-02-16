@@ -1,0 +1,109 @@
+flavors:
+  python_function:
+    env: conda.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    python_version: 3.8.8
+  sklearn:
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 0.24.1
+model_uuid: 4318619b97a245fb8456cfd34b97a0a8
+signature:
+  inputs: '[{"name": 0, "type": "string"}, {"name": 1, "type": "string"}, {"name":
+    2, "type": "string"}, {"name": 3, "type": "string"}, {"name": 4, "type": "string"},
+    {"name": 5, "type": "string"}, {"name": 6, "type": "string"}, {"name": 7, "type":
+    "string"}, {"name": 8, "type": "string"}, {"name": 9, "type": "string"}, {"name":
+    10, "type": "string"}, {"name": 11, "type": "string"}, {"name": 12, "type": "string"},
+    {"name": 13, "type": "string"}, {"name": 14, "type": "string"}, {"name": 15, "type":
+    "string"}, {"name": 16, "type": "string"}, {"name": 17, "type": "string"}, {"name":
+    18, "type": "string"}, {"name": 19, "type": "string"}, {"name": 20, "type": "string"},
+    {"name": 21, "type": "string"}, {"name": 22, "type": "string"}, {"name": 23, "type":
+    "string"}, {"name": 24, "type": "string"}, {"name": 25, "type": "string"}, {"name":
+    26, "type": "string"}, {"name": 27, "type": "string"}, {"name": 28, "type": "string"},
+    {"name": 29, "type": "string"}, {"name": 30, "type": "string"}, {"name": 31, "type":
+    "string"}, {"name": 32, "type": "string"}, {"name": 33, "type": "string"}, {"name":
+    34, "type": "string"}, {"name": 35, "type": "string"}, {"name": 36, "type": "string"},
+    {"name": 37, "type": "string"}, {"name": 38, "type": "string"}, {"name": 39, "type":
+    "string"}, {"name": 40, "type": "string"}, {"name": 41, "type": "string"}, {"name":
+    42, "type": "string"}, {"name": 43, "type": "string"}, {"name": 44, "type": "string"},
+    {"name": 45, "type": "string"}, {"name": 46, "type": "string"}, {"name": 47, "type":
+    "string"}, {"name": 48, "type": "string"}, {"name": 49, "type": "string"}, {"name":
+    50, "type": "string"}, {"name": 51, "type": "string"}, {"name": 52, "type": "string"},
+    {"name": 53, "type": "string"}, {"name": 54, "type": "string"}, {"name": 55, "type":
+    "string"}, {"name": 56, "type": "string"}, {"name": 57, "type": "string"}, {"name":
+    58, "type": "string"}, {"name": 59, "type": "string"}, {"name": 60, "type": "string"},
+    {"name": 61, "type": "string"}, {"name": 62, "type": "string"}, {"name": 63, "type":
+    "string"}, {"name": 64, "type": "string"}, {"name": 65, "type": "string"}, {"name":
+    66, "type": "string"}, {"name": 67, "type": "string"}, {"name": 68, "type": "string"},
+    {"name": 69, "type": "string"}, {"name": 70, "type": "string"}, {"name": 71, "type":
+    "string"}, {"name": 72, "type": "string"}, {"name": 73, "type": "string"}, {"name":
+    74, "type": "string"}, {"name": 75, "type": "string"}, {"name": 76, "type": "string"},
+    {"name": 77, "type": "string"}, {"name": 78, "type": "string"}, {"name": 79, "type":
+    "string"}, {"name": 80, "type": "string"}, {"name": 81, "type": "string"}, {"name":
+    82, "type": "string"}, {"name": 83, "type": "string"}, {"name": 84, "type": "string"},
+    {"name": 85, "type": "string"}, {"name": 86, "type": "string"}, {"name": 87, "type":
+    "string"}, {"name": 88, "type": "string"}, {"name": 89, "type": "string"}, {"name":
+    90, "type": "string"}, {"name": 91, "type": "string"}, {"name": 92, "type": "string"},
+    {"name": 93, "type": "string"}, {"name": 94, "type": "string"}, {"name": 95, "type":
+    "string"}, {"name": 96, "type": "string"}, {"name": 97, "type": "string"}, {"name":
+    98, "type": "string"}, {"name": 99, "type": "string"}, {"name": 100, "type": "string"},
+    {"name": 101, "type": "string"}, {"name": 102, "type": "string"}, {"name": 103,
+    "type": "string"}, {"name": 104, "type": "string"}, {"name": 105, "type": "string"},
+    {"name": 106, "type": "string"}, {"name": 107, "type": "string"}, {"name": 108,
+    "type": "string"}, {"name": 109, "type": "string"}, {"name": 110, "type": "string"},
+    {"name": 111, "type": "string"}, {"name": 112, "type": "string"}, {"name": 113,
+    "type": "string"}, {"name": 114, "type": "string"}, {"name": 115, "type": "string"},
+    {"name": 116, "type": "string"}, {"name": 117, "type": "string"}, {"name": 118,
+    "type": "string"}, {"name": 119, "type": "string"}, {"name": 120, "type": "string"},
+    {"name": 121, "type": "string"}, {"name": 122, "type": "string"}, {"name": 123,
+    "type": "string"}, {"name": 124, "type": "string"}, {"name": 125, "type": "string"},
+    {"name": 126, "type": "string"}, {"name": 127, "type": "string"}, {"name": 128,
+    "type": "string"}, {"name": 129, "type": "string"}, {"name": 130, "type": "string"},
+    {"name": 131, "type": "string"}, {"name": 132, "type": "string"}, {"name": 133,
+    "type": "string"}, {"name": 134, "type": "string"}, {"name": 135, "type": "string"},
+    {"name": 136, "type": "string"}, {"name": 137, "type": "string"}, {"name": 138,
+    "type": "string"}, {"name": 139, "type": "string"}, {"name": 140, "type": "string"},
+    {"name": 141, "type": "string"}, {"name": 142, "type": "string"}, {"name": 143,
+    "type": "string"}, {"name": 144, "type": "string"}, {"name": 145, "type": "string"},
+    {"name": 146, "type": "string"}, {"name": 147, "type": "string"}, {"name": 148,
+    "type": "string"}, {"name": 149, "type": "string"}, {"name": 150, "type": "string"},
+    {"name": 151, "type": "string"}, {"name": 152, "type": "string"}, {"name": 153,
+    "type": "string"}, {"name": 154, "type": "string"}, {"name": 155, "type": "string"},
+    {"name": 156, "type": "string"}, {"name": 157, "type": "string"}, {"name": 158,
+    "type": "string"}, {"name": 159, "type": "string"}, {"name": 160, "type": "string"},
+    {"name": 161, "type": "string"}, {"name": 162, "type": "string"}, {"name": 163,
+    "type": "string"}, {"name": 164, "type": "string"}, {"name": 165, "type": "string"},
+    {"name": 166, "type": "string"}, {"name": 167, "type": "string"}, {"name": 168,
+    "type": "string"}, {"name": 169, "type": "string"}, {"name": 170, "type": "string"},
+    {"name": 171, "type": "string"}, {"name": 172, "type": "string"}, {"name": 173,
+    "type": "string"}, {"name": 174, "type": "string"}, {"name": 175, "type": "string"},
+    {"name": 176, "type": "string"}, {"name": 177, "type": "string"}, {"name": 178,
+    "type": "string"}, {"name": 179, "type": "string"}, {"name": 180, "type": "string"},
+    {"name": 181, "type": "string"}, {"name": 182, "type": "string"}, {"name": 183,
+    "type": "string"}, {"name": 184, "type": "string"}, {"name": 185, "type": "string"},
+    {"name": 186, "type": "string"}, {"name": 187, "type": "string"}, {"name": 188,
+    "type": "string"}, {"name": 189, "type": "string"}, {"name": 190, "type": "string"},
+    {"name": 191, "type": "string"}, {"name": 192, "type": "string"}, {"name": 193,
+    "type": "string"}, {"name": 194, "type": "string"}, {"name": 195, "type": "string"},
+    {"name": 196, "type": "string"}, {"name": 197, "type": "string"}, {"name": 198,
+    "type": "string"}, {"name": 199, "type": "string"}, {"name": 200, "type": "string"},
+    {"name": 201, "type": "string"}, {"name": 202, "type": "string"}, {"name": 203,
+    "type": "string"}, {"name": 204, "type": "string"}, {"name": 205, "type": "string"},
+    {"name": 206, "type": "string"}, {"name": 207, "type": "string"}, {"name": 208,
+    "type": "string"}, {"name": 209, "type": "string"}, {"name": 210, "type": "string"},
+    {"name": 211, "type": "string"}, {"name": 212, "type": "string"}, {"name": 213,
+    "type": "string"}, {"name": 214, "type": "string"}, {"name": 215, "type": "string"},
+    {"name": 216, "type": "string"}, {"name": 217, "type": "string"}, {"name": 218,
+    "type": "string"}, {"name": 219, "type": "string"}, {"name": 220, "type": "string"},
+    {"name": 221, "type": "string"}, {"name": 222, "type": "string"}, {"name": 223,
+    "type": "string"}, {"name": 224, "type": "string"}, {"name": 225, "type": "string"},
+    {"name": 226, "type": "string"}, {"name": 227, "type": "string"}, {"name": 228,
+    "type": "string"}, {"name": 229, "type": "string"}, {"name": 230, "type": "string"},
+    {"name": 231, "type": "string"}, {"name": 232, "type": "string"}, {"name": 233,
+    "type": "string"}, {"name": 234, "type": "string"}, {"name": 235, "type": "string"},
+    {"name": 236, "type": "string"}, {"name": 237, "type": "string"}, {"name": 238,
+    "type": "string"}, {"name": 239, "type": "string"}, {"name": 240, "type": "string"},
+    {"name": 241, "type": "string"}, {"name": 242, "type": "string"}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int32", "shape": [-1, 369]}}]'
+utc_time_created: '2022-02-15 15:17:03.284342'

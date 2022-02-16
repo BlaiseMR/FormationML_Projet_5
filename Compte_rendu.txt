@@ -202,4 +202,36 @@ L'étiquetage peut-être compliqué à mettre en place.
 	- Supervisé
 		-> Vestorization(TFidF/word2vec/doc2vec), model(Linear/SVC/XGBoost/RandomForest), apprentissage (OVR/Chain)
 
-		
+24/01/2022
+7) Modélisation
+	- SVC est à passé
+	- Logistic Regression, XGBoost, Random Forest
+		-> PC fixe = word2vec, doc2vec
+		-> Optimisation en changeant les taille des vecteurs, évaluation avec les scores des modèles.
+	- Le reste est avec google collab
+
+8) Développer une api dans Flask, hébergeur gratuit : Heroku
+	- Compresser les données avec bz2 pour les Random Forest
+ 
+9) Ecrire le rapport en attendant sur le traitement des données et les modèles non-supervisés.
+(S'inspirer des différents tuto que l'on a trouvé)
+	- Décrire les modèle de vectorisation
+	- Décrire les métriques utilisés
+	- Présenter les figure avec LDA et décrire
+	- Ne pas présenter des bout de code
+
+1/02/2022
+
+9)
+	Parler du temps de calcul comme un paramètre de sélection
+
+8/02/2022
+	-> Arrêt sur le Word2vec
+
+	On veut qu'il donne un maximum de bon Tags, c'est pour ça que veux le meilleur Recall
+	Le f1_score est le compromis entre la précision et le recall -> Bon compromis entre Recall et Précision
+	Le Jaccard fait l'intersection entre ce qui est prédit et ce qui est réel
+
+L'api est plus important que l'article
+	https://towardsdatascience.com/how-to-deploy-your-custom-ml-model-with-streamlit-and-heroku-53456cb054fb
+	https://www.analyticsvidhya.com/blog/2021/10/a-complete-guide-on-machine-learning-model-deployment-using-heroku/
