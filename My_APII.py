@@ -55,7 +55,7 @@ def set_str(title_text, body_ext):
 
     else :
         st.write(
-            'Problem detetc'
+            'Problem of language'
             )
             
 #     except:
@@ -89,10 +89,7 @@ def set_str(title_text, body_ext):
         
 #     return response.json()
 
-def prediction(title_text, body_ext):
-    load_pipe = pickle.load(open('./APP/Pipe_LogReg/model.pkl', 'rb'))
-    MLB = pickle.load(open('./APP/LabelBinarizer.pkl', 'rb'))
-    
+def prediction(title_text, body_ext, load_pipe, MLB):
     data = set_str(title_text, body_ext)
     pred = load_pipe.predict(data.values)
     
@@ -106,6 +103,9 @@ def main():
     nltk.download('punkt')
     nltk.download('averaged_perceptron_tagger')
     nltk.download('omw-1.4')
+    
+    load_pipe = pickle.load(open('./APP/Pipe_LogReg/model.pkl', 'rb'))
+    MLB = pickle.load(open('./APP/LabelBinarizer.pkl', 'rb'))
 
     st.title('Find Best tags for your Stackoverflow question')
 
@@ -117,7 +117,7 @@ def main():
         pred = None
 
 #         pred = request_prediction(MLFLOW_URI, user_input_title, user_input_Body)
-        pred = prediction(user_input_title, user_input_Body)
+        pred = prediction(user_input_title, user_input_Body, load_pipe, MLB)
         st.write(
             'Suggested Tags : {0}'.format(pred)
         )
