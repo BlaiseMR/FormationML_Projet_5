@@ -5,3 +5,4 @@ nltk
 pandas==1.4.1
 sklearn
 streamlit==1.5.1
+xgboost

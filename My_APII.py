@@ -113,7 +113,8 @@ def main():
 #     filename = file_selector()
 #     st.write('You selected `%s`' % filename)
     
-    load_pipe = pickle.load(open('./App/Pipe_LogReg/model.pkl', 'rb'))
+#     load_pipe = pickle.load(open('./App/Pipe_LogReg/model.pkl', 'rb'))
+    load_pipe = pickle.load(open('./App/Pipe_XGBoost/model.pkl', 'rb'))
     MLB = pickle.load(open('./App/LabelBinarizer.pkl', 'rb'))
 
     st.title('Find Best tags for your Stackoverflow question')
